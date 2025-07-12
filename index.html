@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elvis & Docinho de Coco</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="fotos/foto1.img.jpeg" />
+</head>
+<style>
+  @font-face {
+  font-family: 'DancingScript';
+  src: url('fonte/Lovely\ Valentine\ Sans.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.text, .text1, .text p, .text1 h2 {
+  font-family: 'DancingScript', cursive;
+  font-size: 1.5em;
+  color: #c4376d;
+}
+
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, #ffe0ec, #ffeaf4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.carta {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.carta-frente, .carta-atras {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 1s ease;
+}
+
+.carta-frente {
+  background: #ff8fa3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.carta-frente::before {
+  content: "💌";
+  font-size: 3rem;
+}
+
+.carta-atras {
+  background: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mensagem h2 {
+  color: #ff5a85;
+  margin-top: 0;
+}
+
+.mensagem p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #ff85a2;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background: #ff5a85;
+  transform: scale(1.05);
+}
+
+/* Animação de virar */
+.carta.virada .carta-frente {
+  transform: rotateY(180deg);
+}
+
+.carta.virada .carta-atras {
+  transform: rotateY(360deg);
+}
+</style>
+<body>
+  <div class="carta" id="carta">
+    <div class="carta-frente"></div>
+    <div class="carta-atras">
+      <div class="mensagem">
+        <h2>Para o amor da minha vida 💖</h2>
+        <p>
+          "Você é o meu lugar favorito".<br/> 
+          Desde que você entrou na minha vida, tudo ganhou cor. As manhãs ficaram mais leves, as noites mais calmas e até o silêncio passou a ter um significado diferente — como se estivesse cheio de nós dois. Você chegou de um jeito suave, mas marcou fundo. Com seu jeito, seu sorriso, suas palavras... você me trouxe paz em forma de pessoa.
+
+Não é só o amor, é o cuidado. É o jeito como você me escuta, como me entende até quando eu não digo nada. É essa sua presença que acalma a bagunça dentro de mim. Ao seu lado, eu me sinto em casa — e não importa onde eu esteja, se estiver com você, estou onde deveria estar.
+
+Você é o meu abrigo, meu porto seguro. E se me pedissem para escolher entre mil caminhos, eu escolheria o seu, sempre. Porque amar você é mais do que um sentimento: é uma certeza.❤️
+        </p>
+        <a href="mensagem.html" class="botao">Ver nossas fotos 📸</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="java.js"></script>
+</body>
+</html>
